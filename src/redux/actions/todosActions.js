@@ -3,7 +3,7 @@ import moment from "moment";
 import { types } from '../types/types';
 
 
-const apiUrl = "http://localhost:8000/v1";
+const apiUrl = "https://todo-backend-test-dev.herokuapp.com/v1";
 
 export const getAllTodos = () => async (dispatch) => {
     try {
