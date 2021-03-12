@@ -79,7 +79,7 @@ También, dicho modal usa hooks personalizados.
 
 ## Licencia
 
-The project uses a license of type [ISC](https://opensource.org/licenses/ISC)
+El proyecto usa una licencia de tipo [ISC](https://opensource.org/licenses/ISC)
 
 ## Autor
 
