@@ -41,6 +41,7 @@ Para manejar el flujo de trabajo con redux se manejaron los **reducers, types, a
 │  │  ├─ Sidebar/        # Sidebar personalizable
 │  │  ├─ Todos/          # Render de la lista de TODOS
 │  │  ├─ CRUDModal       # Modal para visualizar, crear y editar un TODO
+│  │  ├─ test/           # Pruebas unitarias
 │  ├─ hooks/             # Hooks personalizables
 │  │  ├─ useModal/       # Hook personalizado para el modal
 │  ├─ redux/             # Redux
