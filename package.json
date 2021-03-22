@@ -12,6 +12,7 @@
     "moment": "^2.29.1",
     "node-sass": "^4.14.1",
     "popper.js": "^1.16.1",
+    "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-bootstrap-icons": "^1.2.2",
     "react-dom": "^17.0.1",
@@ -27,7 +28,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --silent",
+    "test:coverage": "react-scripts test --silent --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

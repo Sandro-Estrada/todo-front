@@ -77,6 +77,66 @@ También, dicho modal usa hooks personalizados.
   const [isOpenModal, openModal, closeModal] = useModal(); 
 ```
 
+## Pruebas
+Esté proyecto integra pruebas unitarias para comprobar que cada componente creado se renderice correctamente.
+Para ejecutar dichas pruebas basta con ejecutar:
+
+````
+npm run test
+````
+
+Para tener más información de las pruebas:
+
+````
+npm run test:coverage
+````
+
+## Documentación
+### Componentes
+Los componentes enlistados a continuación manejan **propTypes** que ayuda a reconocer las propiedades que maneja el componente así como su tipo de dato a la hora de importarlo.
+#### CRUDModal
+Modal para mostrar, editar y crear un **Todo**
+**Propiedades**
+
+| Propiedad         | Tipo de valor | Descripción                                                                      |
+|-------------------|---------------|----------------------------------------------------------------------------------|
+| **isOpenModal**   | Boolean       | Muestra o no el modal                                                            |
+| **closeModal**    | Function      | Función que cierra el modal                                                      |
+| **filterDate**    | String        | Fecha del filtro                                                                 |
+| **modalTitle**    | String        | Título del modal                                                                 |
+| **isEdit**        | Boolean       | Para cambiar la funcionalidad del modal entre crear o editar                     |
+| **todoSelected**  | Object        | Si está editando, muestra la información del todo                                |
+| **setFilterDate** | Function      | Función que limpia el filtro del componente padre para mostrar todos los objetos |
+
+**Uso básico**
+
+````JSX
+import CRUDModal from './src/components/CRUDModal';
+
+<div>
+  <CRUDModal
+    isOpenModal={true}
+    closeModal={() => true}
+    filterDate={'2021-03-21'}
+    modalTitle={'Crear'}
+    isEdit={false}
+    setFilterDate={() => ''}
+  />
+  <CRUDModal
+    isOpenModal={true}
+    closeModal={() => true}
+    filterDate={'2021-03-21'}
+    modalTitle={'Editar'}
+    isEdit={true}
+    todoSelected={{
+      title: 'título',
+      description: 'descripción'
+    }}
+    setFilterDate={() => ''}
+  />
+<div/>
+````
+
 ## Licencia
 
 El proyecto usa una licencia de tipo [ISC](https://opensource.org/licenses/ISC)

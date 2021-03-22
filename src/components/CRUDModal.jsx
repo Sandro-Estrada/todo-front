@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import Modal from "./Modal/Modal";
 import { createTodo, updateTodo, getAllTodos } from "../redux/actions/todosActions";
 import { useDispatch } from "react-redux";
@@ -131,5 +132,33 @@ const CRUDModal = ({
     </div>
   );
 };
+
+CRUDModal.propTypes = {
+  /**
+   * Display or not the modal
+   */
+  isOpenModal: PropTypes.bool,
+  /**
+   * Function to close modal
+   */
+  closeModal: PropTypes.func,
+  filterDate: PropTypes.string,
+  /**
+   * Modal title
+   */
+  modalTitle: PropTypes.string,
+  /**
+   * To switch between create or edit
+   */
+  isEdit: PropTypes.bool,
+  /**
+   * If it is editing, display todo information
+   */
+  todoSelected: PropTypes.object,
+  /**
+   * Function that clean filter and show all todos
+   */
+  setFilterDate: PropTypes.func
+}
 
 export default CRUDModal;
