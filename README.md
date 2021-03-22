@@ -96,6 +96,7 @@ npm run test:coverage
 Los componentes enlistados a continuación manejan **propTypes** que ayuda a reconocer las propiedades que maneja el componente así como su tipo de dato a la hora de importarlo.
 #### CRUDModal
 Modal para mostrar, editar y crear un **Todo**
+
 **Propiedades**
 
 | Propiedad         | Tipo de valor | Descripción                                                                      |
